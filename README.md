@@ -23,7 +23,7 @@ Home Assistant Config files for Bestin IOT
 3. 전원 소켓(대기전력 차단 지원)
 4. 전열교환기
 5. 가스벨브(단방향)
-6. 외출모드
+6. 외출설정
 7. 도어락(상태조회 지원)
 
 ## 작성시 참조한 github
