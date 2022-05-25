@@ -111,7 +111,7 @@
   scan_interval: 5
   command: "curl --location --request GET 'http://{{states('sensor.host_ip')}}/webapp/data/getHomeDevice.php?req_name=remote_access_doorlock&req_action=status' --header 'Cookie: PHPSESSID={{states('sensor.bestin_cookie_phpsessid')}}; user_id={{states('sensor.id')}}; user_name={{states('sensor.user_name')}}' | grep -oP '(?<=unit_status=.).*?(?=./>)'"
 
-#외출모드 상태조회
+#외출 설정 상태조회
 - platform: command_line
   name: outmode_home
   scan_interval: 5
