@@ -1,0 +1,179 @@
+- platform: template
+  switches:
+    switch_kitchen1:
+      friendly_name: "부엌 전원1"
+      value_template: "{{ false if states('sensor.switches_kitchen').split('\n')[0].split('/')[1] == 'off' else true }}"  
+      turn_on:
+        service: rest_command.electric_control
+        data:
+          room_num: '1'
+          unit_num: '1'
+          control_action: 'on'
+      turn_off:
+        service: rest_command.electric_control
+        data:
+          room_num: '1'
+          unit_num: '1'
+          control_action: 'off'
+    
+    switch_kitchen2:
+      friendly_name: "부엌 전원2"
+      value_template: "{{ false if states('sensor.switches_kitchen').split('\n')[1].split('/')[1] == 'off' else true }}"
+      turn_on:
+        service: rest_command.electric_control
+        data:
+          room_num: '1'
+          unit_num: '2'
+          control_action: 'on'
+      turn_off:
+        service: rest_command.electric_control
+        data:
+          room_num: '1'
+          unit_num: '2'
+          control_action: 'off'
+          
+    switch_mainroom1:
+      friendly_name: "안방 전원1"
+      value_template: "{{ false if states('sensor.switches_mainroom').split('\n')[0].split('/')[1] == 'off' else true }}" 
+      turn_on:
+        service: rest_command.electric_control
+        data:
+          room_num: '2'
+          unit_num: '1'
+          control_action: 'on'
+      turn_off:
+        service: rest_command.electric_control
+        data:
+          room_num: '2'
+          unit_num: '1'
+          control_action: 'off'          
+          
+    switch_mainroom2:
+      friendly_name: "안방 전원2"
+      value_template: "{{ false if states('sensor.switches_mainroom').split('\n')[1].split('/')[1] == 'off' else true }}"
+      turn_on:
+        service: rest_command.electric_control
+        data:
+          room_num: '2'
+          unit_num: '2'
+          control_action: 'on'
+      turn_off:
+        service: rest_command.electric_control
+        data:
+          room_num: '2'
+          unit_num: '2'
+          control_action: 'off'
+          
+    switch_room3:
+      friendly_name: "방3 전원1"
+      value_template: "{{ false if states('sensor.switches_room3').split('\n')[0].split('/')[1] == 'off' else true }}" 
+      turn_on:
+        service: rest_command.electric_control
+        data:
+          room_num: '3'
+          unit_num: '1'
+          control_action: 'on'
+      turn_off:
+        service: rest_command.electric_control
+        data:
+          room_num: '3'
+          unit_num: '1'
+          control_action: 'off'          
+          
+    switch_room3:
+      friendly_name: "방3 전원2"
+      value_template: "{{ false if states('sensor.switches_room3').split('\n')[1].split('/')[1] == 'off' else true }}"
+      turn_on:
+        service: rest_command.electric_control
+        data:
+          room_num: '3'
+          unit_num: '2'
+          control_action: 'on'
+      turn_off:
+        service: rest_command.electric_control
+        data:
+          room_num: '3'
+          unit_num: '2'
+          control_action: 'off'
+          
+    switch_room4:
+      friendly_name: "방4 전원1"
+      value_template: "{{ false if states('sensor.switches_room4').split('\n')[0].split('/')[1] == 'off' else true }}" 
+      turn_on:
+        service: rest_command.electric_control
+        data:
+          room_num: '4'
+          unit_num: '1'
+          control_action: 'on'
+      turn_off:
+        service: rest_command.electric_control
+        data:
+          room_num: '4'
+          unit_num: '1'
+          control_action: 'off'          
+          
+    switch_room4:
+      friendly_name: "방4 전원2"
+      value_template: "{{ false if states('sensor.switches_room4').split('\n')[1].split('/')[1] == 'off' else true }}"
+      turn_on:
+        service: rest_command.electric_control
+        data:
+          room_num: '4'
+          unit_num: '2'
+          control_action: 'on'
+      turn_off:
+        service: rest_command.electric_control
+        data:
+          room_num: '4'
+          unit_num: '2'
+          control_action: 'off'
+
+    switch_room5:
+      friendly_name: "방5 전원1"
+      value_template: "{{ false if states('sensor.switches_room5').split('\n')[0].split('/')[1] == 'off' else true }}" 
+      turn_on:
+        service: rest_command.electric_control
+        data:
+          room_num: '5'
+          unit_num: '1'
+          control_action: 'on'
+      turn_off:
+        service: rest_command.electric_control
+        data:
+          room_num: '5'
+          unit_num: '1'
+          control_action: 'off'          
+          
+    switch_room5:
+      friendly_name: "방5 전원2"
+      value_template: "{{ false if states('sensor.switches_room5').split('\n')[1].split('/')[1] == 'off' else true }}"
+      turn_on:
+        service: rest_command.electric_control
+        data:
+          room_num: '5'
+          unit_num: '2'
+          control_action: 'on'
+      turn_off:
+        service: rest_command.electric_control
+        data:
+          room_num: '5'
+          unit_num: '2'
+          control_action: 'off'
+
+    gas_valve:
+      friendly_name: "가스 밸브"
+      icon_template: mdi:valve
+      value_template: "{{ false if states.sensor.gas_valve.state == 'close' else true }}"
+      turn_on:
+        service: rest_command.gas_valve_close
+      turn_off:
+        service: rest_command.gas_valve_close
+
+    out_mode:
+      friendly_name: "외출 모드"
+      value_template: "{{ false if states.sensor.outmode_home.state == 'normal' else true }}"
+      turn_on:
+        service: rest_command.out_mode
+      turn_off:
+        service: rest_command.out_mode
+          
