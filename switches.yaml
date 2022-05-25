@@ -170,7 +170,7 @@
         service: rest_command.gas_valve_close
 
     out_mode:
-      friendly_name: "외출 모드"
+      friendly_name: "외출 설정"
       value_template: "{{ false if states.sensor.outmode_home.state == 'normal' else true }}"
       turn_on:
         service: rest_command.out_mode
