@@ -20,6 +20,7 @@ Home Assistant Config files for Bestin IOT
    3-1. 거실(조명1, 조명2, 조명3), 부엌(조명2개, 방1번), 안방(조명2개, 방2번)은 기본값으로 설정 되어있음 혹시 다를 경우 수정필요
    
    3-2. 
+   
         [조명]
         req_unit_num : 조명번호를 의미
         req_ctrl_action : 조명제어명령을 의미, off 또는 on로 입력
