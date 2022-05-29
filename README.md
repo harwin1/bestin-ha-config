@@ -15,7 +15,8 @@ Home Assistant Config files for Bestin IOT
 ## 설정 가이드
 1. 'environment_variables.json'의 파일 내용 수정 : Host IP 주소, 계정 id, 계정 password 및 쿠키 정보에서 알아낸 user_name의 값 입력
 2. `automations.yaml` 참고하여 주기적으로 cookie_phpsessid command를 호출하여 인증토큰을 갱신하도록 자동화 구성
-3. 본인 거주 아파트 환경에 맞게 방(이름) 갯수, 조명(이름) 갯수, 전원(이름) 소켓 갯수, 난방(이름) 갯수에 따라 sensors.yaml, lights.yaml, switches.yaml 파일 내용 수정
+3. 본인 거주 아파트 환경에 맞게 방(이름) 갯수, 조명(이름) 갯수, 전원(이름) 소켓 갯수, 난방(이름) 갯수에 따라 sensors.yaml, lights.yaml, switches.yaml 파일 내용 수정 필요
+   거실(조명1, 조명2, 조명3), 부엌(조명2개, 방1번), 안방(조명2개, 방2번)은 기본값으로 설정 되어있음 혹시 다를 경우 수정필요
 
 ## 지원 기능
 1. 조명
