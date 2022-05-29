@@ -1,8 +1,8 @@
 - platform: template
   switches:
-    switch_kitchen1:
-      friendly_name: "부엌 전원1"
-      value_template: "{{ false if states('sensor.switches_kitchen').split('\n')[0].split('/')[1] == 'off' else true }}"  
+    switch_room1:
+      friendly_name: "방1 전원1"
+      value_template: "{{ false if states('sensor.switches_room1').split('\n')[0].split('/')[1] == 'off' else true }}"  
       turn_on:
         service: rest_command.electric_control
         data:
@@ -16,9 +16,9 @@
           unit_num: '1'
           control_action: 'off'
     
-    switch_kitchen2:
-      friendly_name: "부엌 전원2"
-      value_template: "{{ false if states('sensor.switches_kitchen').split('\n')[1].split('/')[1] == 'off' else true }}"
+    switch_room1:
+      friendly_name: "방1 전원2"
+      value_template: "{{ false if states('sensor.switches_room1').split('\n')[1].split('/')[1] == 'off' else true }}"
       turn_on:
         service: rest_command.electric_control
         data:
@@ -32,9 +32,9 @@
           unit_num: '2'
           control_action: 'off'
           
-    switch_mainroom1:
-      friendly_name: "안방 전원1"
-      value_template: "{{ false if states('sensor.switches_mainroom').split('\n')[0].split('/')[1] == 'off' else true }}" 
+    switch_room2:
+      friendly_name: "방2 전원1"
+      value_template: "{{ false if states('sensor.switches_room2').split('\n')[0].split('/')[1] == 'off' else true }}" 
       turn_on:
         service: rest_command.electric_control
         data:
@@ -48,9 +48,9 @@
           unit_num: '1'
           control_action: 'off'          
           
-    switch_mainroom2:
-      friendly_name: "안방 전원2"
-      value_template: "{{ false if states('sensor.switches_mainroom').split('\n')[1].split('/')[1] == 'off' else true }}"
+    switch_room2:
+      friendly_name: "방2 전원2"
+      value_template: "{{ false if states('sensor.switches_room2').split('\n')[1].split('/')[1] == 'off' else true }}"
       turn_on:
         service: rest_command.electric_control
         data:
