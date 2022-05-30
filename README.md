@@ -45,7 +45,10 @@ Home Assistant Config files for Bestin IOT
          
         [난방]
         req_unit_num : 각 난방기 번호를 의미
-        req_ctrl_action : 난방제어명령을 의미, (off 또는 on)/(원하는 온도 설정)으로 구성됨
+        req_ctrl_action : 난방제어명령을 의미, (off 또는 on)/(원하는 온도 설정)으로 구성됨(아직 rest api 방식에 맞는 난방 코드로 수정을 못함, 사용할려면
+        rest_commands.yaml→thermostat_control_room부분에서 target를 원하는 고정값으로 하여 사용가능)
+        Ex)
+        req_ctrl_action={{control_action}}/{{23.5}}
         
         *난방 상태조회 예시
          (GET) http://<Host IP 주소>/webapp/data/getHomeDevice_heat.php?req_name=remote_access_temper&req_action=status&req_unit_num=room1
@@ -85,7 +88,7 @@ Home Assistant Config files for Bestin IOT
          
 ## 지원 기능
 1. 조명
-2. 난방 
+2. 난방(고정값) 
 3. 콘센트
 4. 전열교환기
 5. 가스벨브(단방향)
