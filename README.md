@@ -76,7 +76,7 @@ Home Assistant Config files for Bestin IOT
          
         [외출설정]
         req_unit_num : unoccupied
-        req_ctrl_action : 외출설정제어명령을 의미, unoccupied(귀가는 아직 확인 못함)
+        req_ctrl_action : 외출설정제어명령을 의미, unoccupied
         
         *외출설정 상태조회 예시
          (GET) http://<Host IP 주소>/webapp/data/getHomeDevice.php?req_name=remote_access_mode&req_action=status
@@ -86,7 +86,7 @@ Home Assistant Config files for Bestin IOT
 ## 지원 기능
 1. 조명
 2. 난방 
-3. 콘센트(대기전력 차단 지원)
+3. 콘센트
 4. 전열교환기
 5. 가스벨브(단방향)
 6. 외출설정
