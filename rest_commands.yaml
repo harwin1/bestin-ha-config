@@ -35,7 +35,7 @@ thermostat_control_room:
     Cookie: 'PHPSESSID={{ states("sensor.bestin_cookie_phpsessid") }}; user_id={{states("sensor.id")}}; user_name={{states("sensor.user_name")}}'
     
 out_mode:
-  url: "http://{{states('sensor.host_ip')}}/webapp/data/getHomeDevice_heat.php?req_name=remote_access_mode&req_action=control&req_ctrl_action=unoccupied"
+  url: "http://{{states('sensor.host_ip')}}/webapp/data/getHomeDevice.php?req_name=remote_access_mode&req_action=control&req_ctrl_action=unoccupied"
   method: GET
   headers:
     Cookie: 'PHPSESSID={{ states("sensor.bestin_cookie_phpsessid") }}; user_id={{states("sensor.id")}}; user_name={{states("sensor.user_name")}}'
