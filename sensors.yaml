@@ -1,4 +1,9 @@
-
+- platform: template
+  sensors:  
+    doorlock:
+      icon_template: mdi:door
+      value_template: "{{ states('sensor.doorlock_home').split('/')[0] }}" 
+      
 - platform: file
   name: bestin_cookie_phpsessid
   file_path: /config/cookie_phpsessid
