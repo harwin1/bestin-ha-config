@@ -1,8 +1,8 @@
 - platform: template
   lights:
-    lights_kitchen1:
-      friendly_name: "부엌 조명 1"
-      value_template: "{{ states('sensor.lights_kitchen').split('\n')[0] }}"
+    lights_room1:
+      friendly_name: "방1 조명1"
+      value_template: "{{ states('sensor.lights_room1').split('\n')[0] }}"
       turn_on:
         service: rest_command.light_control_room
         data:
@@ -16,9 +16,9 @@
           unit_num: '1'
           control_action: 'off'        
           
-    lights_kitchen2:
-      friendly_name: "부엌 조명 2"
-      value_template: "{{ states('sensor.lights_kitchen').split('\n')[1] }}"
+    lights_room1:
+      friendly_name: "방1 조명2"
+      value_template: "{{ states('sensor.lights_room1').split('\n')[1] }}"
       turn_on:
         service: rest_command.light_control_room
         data:
@@ -32,9 +32,9 @@
           unit_num: '2'
           control_action: 'off'
     
-    lights_kitchen3:
-      friendly_name: "부엌 조명 3"
-      value_template: "{{ states('sensor.lights_kitchen').split('\n')[2] }}" 
+    lights_room1:
+      friendly_name: "방1 조명 3"
+      value_template: "{{ states('sensor.lights_room1').split('\n')[2] }}" 
       turn_on:
         service: rest_command.light_control_room
         data:
@@ -90,9 +90,9 @@
           unit_num: '3'
           control_action: 'off'
     
-    lights_mainroom1:
-      friendly_name: "안방 조명1"
-      value_template: "{{ states('sensor.lights_mainroom').split('\n')[0] }}" 
+    lights_room2:
+      friendly_name: "방2 조명1"
+      value_template: "{{ states('sensor.lights_room2').split('\n')[0] }}" 
       turn_on:
         service: rest_command.light_control_room
         data:
@@ -106,8 +106,8 @@
           unit_num: '1'
           control_action: 'off'
 
-    lights_mainroom2:
-      friendly_name: "안방 조명2"
+    lights_room2:
+      friendly_name: "방2 조명2"
       value_template: "{{ states('sensor.lights_mainroom').split('\n')[1] }}" 
       turn_on:
         service: rest_command.light_control_room
