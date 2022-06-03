@@ -1,4 +1,4 @@
- - platform: generic_thermostat
+  - platform: generic_thermostat
     name: thermostat_livingroom
     heater: switch.thermostat_livingroom
     target_sensor: sensor.thermostat_livingroom_temperature
