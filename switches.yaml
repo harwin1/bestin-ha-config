@@ -176,4 +176,81 @@
         service: rest_command.out_mode
       turn_off:
         service: rest_command.out_mode
+        
+        
+   #난방 스위치
+   thermostat_livingroom:
+      value_template: "{{ false if states('sensor.livingroom_temperature').split('\n')[0].split('/')[0] == 'off' else 'true' }}"
+      turn_on:
+        service: rest_command.thermostat_control_room
+        data:
+          unit_num: 'room1'
+          control_action: 'on'
+          target: "{{ state_attr('climate.thermostat_livingroom', 'temperature') }}"
+      turn_off:
+        service: rest_command.thermostat_control_room
+        data:
+          unit_num: 'room1'
+          control_action: 'off'
+          target: "{{ state_attr('climate.thermostat_livingroom', 'temperature') }}"
+          
+    thermostat_room2:
+      value_template: "{{ false if states('sensor.room2_temperature').split('\n')[0].split('/')[0] == 'off' else 'true' }}"
+      turn_on:
+        service: rest_command.thermostat_control_room
+        data:
+          unit_num: 'room2'
+          control_action: 'on'
+          target: "{{ state_attr('climate.thermostat_room2', 'temperature') }}"
+      turn_off:
+        service: rest_command.thermostat_control_room
+        data:
+          unit_num: 'room2'
+          control_action: 'off'
+          target: "{{ state_attr('climate.thermostat_room2', 'temperature') }}"
+
+    thermostat_room3:
+      value_template: "{{ false if states('sensor.room3_temperature').split('\n')[0].split('/')[0] == 'off' else 'true' }}"
+      turn_on:
+        service: rest_command.thermostat_control_room
+        data:
+          unit_num: 'room3'
+          control_action: 'on'
+          target: "{{ state_attr('climate.thermostat_room3', 'temperature') }}"
+      turn_off:
+        service: rest_command.thermostat_control_room
+        data:
+          unit_num: 'room3'
+          control_action: 'off'
+          target: "{{ state_attr('climate.thermostat_room3', 'temperature') }}"
+          
+    thermostat_room4:
+      value_template: "{{ false if states('sensor.room4_temperature').split('\n')[0].split('/')[0] == 'off' else 'true' }}"
+      turn_on:
+        service: rest_command.thermostat_control_room
+        data:
+          unit_num: 'room4'
+          control_action: 'on'
+          target: "{{ state_attr('climate.thermostat_rooom4', 'temperature') }}"
+      turn_off:
+        service: rest_command.thermostat_control_room
+        data:
+          unit_num: 'room4'
+          control_action: 'off'
+          target: "{{ state_attr('climate.thermostat_room4', 'temperature') }}"
+          
+    thermostat_room5:
+      value_template: "{{ false if states('sensor.room5_temperature').split('\n')[0].split('/')[0] == 'off' else 'true' }}"
+      turn_on:
+        service: rest_command.thermostat_control_room
+        data:
+          unit_num: 'room5'
+          control_action: 'on'
+          target: "{{ state_attr('climate.thermostat_room5', 'temperature') }}"
+      turn_off:
+        service: rest_command.thermostat_control_room
+        data:
+          unit_num: 'room5'
+          control_action: 'off'
+          target: "{{ state_attr('climate.thermostat_room5', 'temperature') }}"
           
