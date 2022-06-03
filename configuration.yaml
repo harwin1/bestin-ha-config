@@ -35,4 +35,4 @@ shell_command: !include shell_commands.yaml
 automation: !include automations.yaml
 light: !include lights.yaml
 switch: !include switches.yaml
-climate: !include climate.yaml
+climate: !include climates.yaml
