@@ -17,9 +17,7 @@ Home Assistant Config files for Bestin IOT
 2. `automations.yaml` 참고하여 주기적으로 cookie_phpsessid command를 호출하여 인증토큰을 갱신하도록 자동화 구성
 3. 본인 거주 아파트 환경에 맞게 방(이름) 갯수, 조명(이름) 갯수, 전원(이름) 소켓 갯수, 난방(이름) 갯수에 따라 sensors.yaml, lights.yaml, switches.yaml 파일 내용 수정 필요
    
-   3-1. 거실(조명1, 조명2, 조명3), 부엌(조명2개, 방1번), 안방(조명2개, 방2번)은 기본값으로 설정 되어있음 혹시 다를 경우 수정필요
-   
-   3-2. 
+   3-1. 
    
         [조명]
         req_unit_num : 조명번호를 의미
@@ -45,10 +43,7 @@ Home Assistant Config files for Bestin IOT
          
         [난방]
         req_unit_num : 각 난방기 번호를 의미
-        req_ctrl_action : 난방제어명령을 의미, (off 또는 on)/(원하는 온도 설정)으로 구성됨(아직 rest api 방식에 맞는 난방 코드로 수정을 못함, 사용할려면
-        rest_commands.yaml→thermostat_control_room부분에서 target를 원하는 고정값으로 하여 사용가능)
-        Ex)
-        req_ctrl_action={{control_action}}/{{23.5}}
+        req_ctrl_action : 난방제어명령을 의미, (off 또는 on)/(원하는 온도 설정)으로 구성됨
         
         *난방 상태조회 예시
          (GET) http://<Host IP 주소>/webapp/data/getHomeDevice_heat.php?req_name=remote_access_temper&req_action=status&req_unit_num=room1
@@ -88,7 +83,7 @@ Home Assistant Config files for Bestin IOT
          
 ## 지원 기능
 1. 조명
-2. 난방(고정값) 
+2. 난방
 3. 콘센트
 4. 전열교환기
 5. 가스벨브(단방향)
