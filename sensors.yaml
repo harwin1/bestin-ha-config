@@ -1,7 +1,7 @@
 - platform: template
   sensors:  
     doorlock:
-      friendly_name: ""
+      friendly_name: "도어락"
       icon_template: mdi:door
       value_template: "{{ states('sensor.doorlock_home')}}" 
       
