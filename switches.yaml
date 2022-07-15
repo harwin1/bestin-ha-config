@@ -34,6 +34,23 @@
           unit_num: 'switch2'
           control_action: 'off'
           
+    switch_room1_standby:
+      friendly_name: 방1 대기전력 차단
+      icon_template: mdi:power-socket-de
+      value_template: "{{ false if states('sensor.switches_room2').split('\n')[0].split('/')[1] == 'unset' else true }}" 
+      turn_on:
+        service: rest_command.electric_control
+        data:
+          room_num: '1'
+          unit_num: 'switch1'
+          control_action: 'set'
+      turn_off:
+        service: rest_command.electric_control
+        data:
+          room_num: '1'
+          unit_num: 'switch1'
+          control_action: 'unset'      
+      
     switch_room2:
       friendly_name: "방2 전원1"
       icon_template: mdi:power-socket-de
