@@ -29,7 +29,7 @@ gas_valve_close:
     Cookie: 'PHPSESSID={{ states("sensor.bestin_cookie_phpsessid") }}; user_id={{states("sensor.id")}}; user_name={{states("sensor.user_name")}}'
     
 thermostat_control_room:
-  url: "http://{{states('sensor.host_ip')}}/webapp/data/getHomeDevice.php?req_name=remote_access_temper&req_action=control&req_unit_num={{unit_num}}&req_ctrl_action={{control_action/target}}"
+  url: "http://{{states('sensor.host_ip')}}/webapp/data/getHomeDevice.php?req_name=remote_access_temper&req_action=control&req_unit_num={{unit_num}}&req_ctrl_action={{control_action}}/{{target}}"
   method: GET
   headers:
     Cookie: 'PHPSESSID={{ states("sensor.bestin_cookie_phpsessid") }}; user_id={{states("sensor.id")}}; user_name={{states("sensor.user_name")}}'
