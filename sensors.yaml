@@ -80,23 +80,23 @@
 - platform: command_line
   name: livingroom_temperature
   scan_interval: 5
-  command: "curl --location --request GET 'http://{{states('sensor.host_ip')}}/webapp/data/getHomeDevice_heat.php?req_name=remote_access_temper&req_action=status&req_unit_num=room1' --header 'Cookie: PHPSESSID={{states('sensor.bestin_cookie_phpsessid')}}; user_id={{states('sensor.id')}}; user_name={{states('sensor.user_name')}}' | grep -oP '(?<=unit_status= \")(\\S+)(?=\")'"
+  command: "curl --location --request GET 'http://{{states('sensor.host_ip')}}/webapp/data/getHomeDevice.php?req_name=remote_access_temper&req_action=status&req_unit_num=room1' --header 'Cookie: PHPSESSID={{states('sensor.bestin_cookie_phpsessid')}}; user_id={{states('sensor.id')}}; user_name={{states('sensor.user_name')}}' | grep -oP '(?<=unit_status= \")(\\S+)(?=\")'"
 - platform: command_line
   name: room2_temperature
   scan_interval: 5
-  command: "curl --location --request GET 'http://{{states('sensor.host_ip')}}/webapp/data/getHomeDevice_heat.php?req_name=remote_access_temper&req_action=status&req_unit_num=room2' --header 'Cookie: PHPSESSID={{states('sensor.bestin_cookie_phpsessid')}}; user_id={{states('sensor.id')}}; user_name={{states('sensor.user_name')}}' | grep -oP '(?<=unit_status= \")(\\S+)(?=\")'"
+  command: "curl --location --request GET 'http://{{states('sensor.host_ip')}}/webapp/data/getHomeDevice.php?req_name=remote_access_temper&req_action=status&req_unit_num=room2' --header 'Cookie: PHPSESSID={{states('sensor.bestin_cookie_phpsessid')}}; user_id={{states('sensor.id')}}; user_name={{states('sensor.user_name')}}' | grep -oP '(?<=unit_status= \")(\\S+)(?=\")'"
 - platform: command_line
   name: room3_temperature
   scan_interval: 5
-  command: "curl --location --request GET 'http://{{states('sensor.host_ip')}}/webapp/data/getHomeDevice_heat.php?req_name=remote_access_temper&req_action=status&req_unit_num=room3' --header 'Cookie: PHPSESSID={{states('sensor.bestin_cookie_phpsessid')}}; user_id={{states('sensor.id')}}; user_name={{states('sensor.user_name')}}' | grep -oP '(?<=unit_status= \")(\\S+)(?=\")'"
+  command: "curl --location --request GET 'http://{{states('sensor.host_ip')}}/webapp/data/getHomeDevice.php?req_name=remote_access_temper&req_action=status&req_unit_num=room3' --header 'Cookie: PHPSESSID={{states('sensor.bestin_cookie_phpsessid')}}; user_id={{states('sensor.id')}}; user_name={{states('sensor.user_name')}}' | grep -oP '(?<=unit_status= \")(\\S+)(?=\")'"
 - platform: command_line
   name: room4_temperature
   scan_interval: 5
-  command: "curl --location --request GET 'http://{{states('sensor.host_ip')}}/webapp/data/getHomeDevice_heat.php?req_name=remote_access_temper&req_action=status&req_unit_num=room4' --header 'Cookie: PHPSESSID={{states('sensor.bestin_cookie_phpsessid')}}; user_id={{states('sensor.id')}}; user_name={{states('sensor.user_name')}}' | grep -oP '(?<=unit_status= \")(\\S+)(?=\")'"
+  command: "curl --location --request GET 'http://{{states('sensor.host_ip')}}/webapp/data/getHomeDevice.php?req_name=remote_access_temper&req_action=status&req_unit_num=room4' --header 'Cookie: PHPSESSID={{states('sensor.bestin_cookie_phpsessid')}}; user_id={{states('sensor.id')}}; user_name={{states('sensor.user_name')}}' | grep -oP '(?<=unit_status= \")(\\S+)(?=\")'"
 - platform: command_line
   name: room5_temperature
   scan_interval: 5
-  command: "curl --location --request GET 'http://{{states('sensor.host_ip')}}/webapp/data/getHomeDevice_heat.php?req_name=remote_access_temper&req_action=status&req_unit_num=room5' --header 'Cookie: PHPSESSID={{states('sensor.bestin_cookie_phpsessid')}}; user_id={{states('sensor.id')}}; user_name={{states('sensor.user_name')}}' | grep -oP '(?<=unit_status= \")(\\S+)(?=\")'"
+  command: "curl --location --request GET 'http://{{states('sensor.host_ip')}}/webapp/data/getHomeDevice.php?req_name=remote_access_temper&req_action=status&req_unit_num=room5' --header 'Cookie: PHPSESSID={{states('sensor.bestin_cookie_phpsessid')}}; user_id={{states('sensor.id')}}; user_name={{states('sensor.user_name')}}' | grep -oP '(?<=unit_status= \")(\\S+)(?=\")'"
   
 #가스 밸브 상태 조회
 - platform: command_line
