@@ -37,7 +37,7 @@
     switch_room1_standby:
       friendly_name: "방1 대기전력 차단"
       icon_template: mdi:power-socket-de
-      value_template: "{{ false if states('sensor.switches_room1_standby').split('\n')[0].split('/')[0] == 'unset' else true }}" 
+      value_template: "{{ false if states('sensor.switches_room1').split('\n')[0].split('/')[0] == 'unset' else true }}" 
       turn_on:
         service: rest_command.electric_control
         data:
@@ -88,7 +88,7 @@
     switch_room2_standby:
       friendly_name: "방2 대기전력 차단"
       icon_template: mdi:power-socket-de
-      value_template: "{{ false if states('sensor.switches_room2_standby').split('\n')[0].split('/')[0] == 'unset' else true }}" 
+      value_template: "{{ false if states('sensor.switches_room2').split('\n')[0].split('/')[0] == 'unset' else true }}" 
       turn_on:
         service: rest_command.electric_control
         data:
@@ -139,7 +139,7 @@
     switch_room3_standby:
       friendly_name: "방3 대기전력 차단"
       icon_template: mdi:power-socket-de
-      value_template: "{{ false if states('sensor.switches_room3_standby').split('\n')[0].split('/')[0] == 'unset' else true }}" 
+      value_template: "{{ false if states('sensor.switches_room3').split('\n')[0].split('/')[0] == 'unset' else true }}" 
       turn_on:
         service: rest_command.electric_control
         data:
@@ -190,7 +190,7 @@
     switch_room4_standby:
       friendly_name: "방4 대기전력 차단"
       icon_template: mdi:power-socket-de
-      value_template: "{{ false if states('sensor.switches_room4_standby').split('\n')[0].split('/')[0] == 'unset' else true }}" 
+      value_template: "{{ false if states('sensor.switches_room4').split('\n')[0].split('/')[0] == 'unset' else true }}" 
       turn_on:
         service: rest_command.electric_control
         data:
@@ -241,7 +241,7 @@
     switch_room5_standby:
       friendly_name: "방5 대기전력 차단"
       icon_template: mdi:power-socket-de
-      value_template: "{{ false if states('sensor.switches_room5_standby').split('\n')[0].split('/')[0] == 'unset' else true }}" 
+      value_template: "{{ false if states('sensor.switches_room5').split('\n')[0].split('/')[0] == 'unset' else true }}" 
       turn_on:
         service: rest_command.electric_control
         data:
@@ -275,7 +275,7 @@
         
    # 난방 스위치
     thermostat_livingroom:
-      value_template: "{{ false if states('sensor.livingroom_temperature').split('\n')[0].split('/')[0] == 'off' else 'true' }}"
+      value_template: "{{ false if states('sensor.livingroom_temperature').split('/')[0] == 'off' else true }}"
       turn_on:
         service: rest_command.thermostat_control_room
         data:
@@ -290,7 +290,7 @@
           target: "{{ state_attr('climate.thermostat_livingroom', 'temperature') }}"
           
     thermostat_room2:
-      value_template: "{{ false if states('sensor.room2_temperature').split('\n')[0].split('/')[0] == 'off' else 'true' }}"
+      value_template: "{{ false if states('sensor.room2_temperature').split('/')[0] == 'off' else true }}"
       turn_on:
         service: rest_command.thermostat_control_room
         data:
@@ -305,7 +305,7 @@
           target: "{{ state_attr('climate.thermostat_room2', 'temperature') }}"
 
     thermostat_room3:
-      value_template: "{{ false if states('sensor.room3_temperature').split('\n')[0].split('/')[0] == 'off' else 'true' }}"
+      value_template: "{{ false if states('sensor.room3_temperature').split('/')[0] == 'off' else true }}"
       turn_on:
         service: rest_command.thermostat_control_room
         data:
@@ -320,7 +320,7 @@
           target: "{{ state_attr('climate.thermostat_room3', 'temperature') }}"
           
     thermostat_room4:
-      value_template: "{{ false if states('sensor.room4_temperature').split('\n')[0].split('/')[0] == 'off' else 'true' }}"
+      value_template: "{{ false if states('sensor.room4_temperature').split('/')[0] == 'off' else true }}"
       turn_on:
         service: rest_command.thermostat_control_room
         data:
@@ -335,7 +335,7 @@
           target: "{{ state_attr('climate.thermostat_room4', 'temperature') }}"
           
     thermostat_room5:
-      value_template: "{{ false if states('sensor.room5_temperature').split('\n')[0].split('/')[0] == 'off' else 'true' }}"
+      value_template: "{{ false if states('sensor.room5_temperature').split('/')[0] == 'off' else true }}"
       turn_on:
         service: rest_command.thermostat_control_room
         data:
