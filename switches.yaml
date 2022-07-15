@@ -2,6 +2,7 @@
   switches:
     switch_room1:
       friendly_name: "방1 전원1"
+      icon_template: mdi:power-socket-de
       value_template: "{{ false if states('sensor.switches_room1').split('\n')[0].split('/')[1] == 'off' else true }}"  
       turn_on:
         service: rest_command.electric_control
@@ -18,6 +19,7 @@
     
     switch_room1:
       friendly_name: "방1 전원2"
+      icon_template: mdi:power-socket-de
       value_template: "{{ false if states('sensor.switches_room1').split('\n')[1].split('/')[1] == 'off' else true }}"
       turn_on:
         service: rest_command.electric_control
@@ -34,6 +36,7 @@
           
     switch_room2:
       friendly_name: "방2 전원1"
+      icon_template: mdi:power-socket-de
       value_template: "{{ false if states('sensor.switches_room2').split('\n')[0].split('/')[1] == 'off' else true }}" 
       turn_on:
         service: rest_command.electric_control
@@ -50,6 +53,7 @@
           
     switch_room2:
       friendly_name: "방2 전원2"
+      icon_template: mdi:power-socket-de
       value_template: "{{ false if states('sensor.switches_room2').split('\n')[1].split('/')[1] == 'off' else true }}"
       turn_on:
         service: rest_command.electric_control
@@ -66,6 +70,7 @@
           
     switch_room3:
       friendly_name: "방3 전원1"
+      icon_template: mdi:power-socket-de
       value_template: "{{ false if states('sensor.switches_room3').split('\n')[0].split('/')[1] == 'off' else true }}" 
       turn_on:
         service: rest_command.electric_control
@@ -82,6 +87,7 @@
           
     switch_room3:
       friendly_name: "방3 전원2"
+      icon_template: mdi:power-socket-de
       value_template: "{{ false if states('sensor.switches_room3').split('\n')[1].split('/')[1] == 'off' else true }}"
       turn_on:
         service: rest_command.electric_control
@@ -98,6 +104,7 @@
           
     switch_room4:
       friendly_name: "방4 전원1"
+      icon_template: mdi:power-socket-de
       value_template: "{{ false if states('sensor.switches_room4').split('\n')[0].split('/')[1] == 'off' else true }}" 
       turn_on:
         service: rest_command.electric_control
@@ -114,6 +121,7 @@
           
     switch_room4:
       friendly_name: "방4 전원2"
+      icon_template: mdi:power-socket-de
       value_template: "{{ false if states('sensor.switches_room4').split('\n')[1].split('/')[1] == 'off' else true }}"
       turn_on:
         service: rest_command.electric_control
@@ -130,6 +138,7 @@
 
     switch_room5:
       friendly_name: "방5 전원1"
+      icon_template: mdi:power-socket-de
       value_template: "{{ false if states('sensor.switches_room5').split('\n')[0].split('/')[1] == 'off' else true }}" 
       turn_on:
         service: rest_command.electric_control
@@ -146,6 +155,7 @@
           
     switch_room5:
       friendly_name: "방5 전원2"
+      icon_template: mdi:power-socket-de
       value_template: "{{ false if states('sensor.switches_room5').split('\n')[1].split('/')[1] == 'off' else true }}"
       turn_on:
         service: rest_command.electric_control
@@ -162,7 +172,7 @@
 
     gas_valve:
       friendly_name: "가스 밸브"
-      icon_template: mdi:valve
+      icon_template: mdi:gas-cylinder
       value_template: "{{ false if states.sensor.gas_valve.state == 'close' else true }}"
       turn_on:
         service: rest_command.gas_valve_close
@@ -171,6 +181,7 @@
 
     out_mode:
       friendly_name: "외출 설정"
+      icon_template: mdi:home-export-outline
       value_template: "{{ false if states.sensor.out_mode.state == 'normal' else true }}"
       turn_on:
         service: rest_command.out_mode
