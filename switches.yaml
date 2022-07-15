@@ -274,7 +274,7 @@
         service: rest_command.out_mode
         
    # 난방 스위치
-   thermostat_livingroom:
+    thermostat_livingroom:
       value_template: "{{ false if states('sensor.livingroom_temperature').split('\n')[0].split('/')[0] == 'off' else 'true' }}"
       turn_on:
         service: rest_command.thermostat_control_room
