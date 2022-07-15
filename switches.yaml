@@ -34,6 +34,23 @@
           unit_num: 'switch2'
           control_action: 'off'
           
+    switch_room1_standby:
+      friendly_name: "방1 대기전력 차단"
+      icon_template: mdi:power-socket-de
+      value_template: "{{ false if states('sensor.switches_room1_standby').split('\n')[0].split('/')[0] == 'unset' else true }}" 
+      turn_on:
+        service: rest_command.electric_control
+        data:
+          room_num: '1'
+          unit_num: 'switch1'
+          control_action: 'set'
+      turn_off:
+        service: rest_command.electric_control
+        data:
+          room_num: '1'
+          unit_num: 'switch1'
+          control_action: 'unset'      
+
     switch_room2_1:
       friendly_name: "방2 전원 1"
       icon_template: mdi:power-socket-de
@@ -67,6 +84,23 @@
           room_num: '2'
           unit_num: 'switch2'
           control_action: 'off'
+          
+    switch_room2_standby:
+      friendly_name: "방2 대기전력 차단"
+      icon_template: mdi:power-socket-de
+      value_template: "{{ false if states('sensor.switches_room2_standby').split('\n')[0].split('/')[0] == 'unset' else true }}" 
+      turn_on:
+        service: rest_command.electric_control
+        data:
+          room_num: '2'
+          unit_num: 'switch1'
+          control_action: 'set'
+      turn_off:
+        service: rest_command.electric_control
+        data:
+          room_num: '2'
+          unit_num: 'switch1'
+          control_action: 'unset'                
           
     switch_room3_1:
       friendly_name: "방3 전원 1"
@@ -102,6 +136,23 @@
           unit_num: 'switch2'
           control_action: 'off'
           
+    switch_room3_standby:
+      friendly_name: "방3 대기전력 차단"
+      icon_template: mdi:power-socket-de
+      value_template: "{{ false if states('sensor.switches_room3_standby').split('\n')[0].split('/')[0] == 'unset' else true }}" 
+      turn_on:
+        service: rest_command.electric_control
+        data:
+          room_num: '3'
+          unit_num: 'switch1'
+          control_action: 'set'
+      turn_off:
+        service: rest_command.electric_control
+        data:
+          room_num: '3'
+          unit_num: 'switch1'
+          control_action: 'unset'                
+          
     switch_room4_1:
       friendly_name: "방4 전원 1"
       icon_template: mdi:power-socket-de
@@ -135,6 +186,23 @@
           room_num: '4'
           unit_num: 'switch2'
           control_action: 'off'
+          
+    switch_room4_standby:
+      friendly_name: "방4 대기전력 차단"
+      icon_template: mdi:power-socket-de
+      value_template: "{{ false if states('sensor.switches_room4_standby').split('\n')[0].split('/')[0] == 'unset' else true }}" 
+      turn_on:
+        service: rest_command.electric_control
+        data:
+          room_num: '4'
+          unit_num: 'switch1'
+          control_action: 'set'
+      turn_off:
+        service: rest_command.electric_control
+        data:
+          room_num: '4'
+          unit_num: 'switch1'
+          control_action: 'unset'                
 
     switch_room5_1:
       friendly_name: "방5 전원 1"
@@ -169,6 +237,23 @@
           room_num: '5'
           unit_num: 'switch2'
           control_action: 'off'
+          
+    switch_room5_standby:
+      friendly_name: "방5 대기전력 차단"
+      icon_template: mdi:power-socket-de
+      value_template: "{{ false if states('sensor.switches_room5_standby').split('\n')[0].split('/')[0] == 'unset' else true }}" 
+      turn_on:
+        service: rest_command.electric_control
+        data:
+          room_num: '5'
+          unit_num: 'switch1'
+          control_action: 'set'
+      turn_off:
+        service: rest_command.electric_control
+        data:
+          room_num: '5'
+          unit_num: 'switch1'
+          control_action: 'unset'               
 
     gas_valve:
       friendly_name: "가스 밸브"
@@ -188,8 +273,7 @@
       turn_off:
         service: rest_command.out_mode
         
-        
-   #난방 스위치
+   # 난방 스위치
    thermostat_livingroom:
       value_template: "{{ false if states('sensor.livingroom_temperature').split('\n')[0].split('/')[0] == 'off' else 'true' }}"
       turn_on:
