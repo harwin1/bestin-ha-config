@@ -108,7 +108,7 @@
 
     lights_room2_2:
       friendly_name: "방2 조명 2"
-      value_template: "{{ states('sensor.lights_mainroom').split('\n')[1] }}" 
+      value_template: "{{ states('sensor.lights_room2').split('\n')[1] }}" 
       turn_on:
         service: rest_command.light_control_room
         data:
