@@ -8,12 +8,12 @@
         service: rest_command.electric_control
         data:
           room_num: '1'
-          unit_num: '1'
+          unit_num: 'switch1'
           control_action: 'on'
       turn_off:
         service: rest_command.electric_control
         data:
-          room_num: '1'
+          room_num: 'switch1'
           unit_num: '1'
           control_action: 'off'
     
@@ -25,13 +25,13 @@
         service: rest_command.electric_control
         data:
           room_num: '1'
-          unit_num: '2'
+          unit_num: 'switch2'
           control_action: 'on'
       turn_off:
         service: rest_command.electric_control
         data:
           room_num: '1'
-          unit_num: '2'
+          unit_num: 'switch2'
           control_action: 'off'
           
     switch_room2:
@@ -42,13 +42,13 @@
         service: rest_command.electric_control
         data:
           room_num: '2'
-          unit_num: '1'
+          unit_num: 'switch1'
           control_action: 'on'
       turn_off:
         service: rest_command.electric_control
         data:
           room_num: '2'
-          unit_num: '1'
+          unit_num: 'switch1'
           control_action: 'off'          
           
     switch_room2:
@@ -59,13 +59,13 @@
         service: rest_command.electric_control
         data:
           room_num: '2'
-          unit_num: '2'
+          unit_num: 'switch2'
           control_action: 'on'
       turn_off:
         service: rest_command.electric_control
         data:
           room_num: '2'
-          unit_num: '2'
+          unit_num: 'switch2'
           control_action: 'off'
           
     switch_room3:
@@ -76,13 +76,13 @@
         service: rest_command.electric_control
         data:
           room_num: '3'
-          unit_num: '1'
+          unit_num: 'switch1'
           control_action: 'on'
       turn_off:
         service: rest_command.electric_control
         data:
           room_num: '3'
-          unit_num: '1'
+          unit_num: 'switch1'
           control_action: 'off'          
           
     switch_room3:
@@ -93,13 +93,13 @@
         service: rest_command.electric_control
         data:
           room_num: '3'
-          unit_num: '2'
+          unit_num: 'switch2'
           control_action: 'on'
       turn_off:
         service: rest_command.electric_control
         data:
           room_num: '3'
-          unit_num: '2'
+          unit_num: 'switch2'
           control_action: 'off'
           
     switch_room4:
@@ -110,13 +110,13 @@
         service: rest_command.electric_control
         data:
           room_num: '4'
-          unit_num: '1'
+          unit_num: 'switch1'
           control_action: 'on'
       turn_off:
         service: rest_command.electric_control
         data:
           room_num: '4'
-          unit_num: '1'
+          unit_num: 'switch1'
           control_action: 'off'          
           
     switch_room4:
@@ -127,13 +127,13 @@
         service: rest_command.electric_control
         data:
           room_num: '4'
-          unit_num: '2'
+          unit_num: 'switch2'
           control_action: 'on'
       turn_off:
         service: rest_command.electric_control
         data:
           room_num: '4'
-          unit_num: '2'
+          unit_num: 'switch2'
           control_action: 'off'
 
     switch_room5:
@@ -144,13 +144,13 @@
         service: rest_command.electric_control
         data:
           room_num: '5'
-          unit_num: '1'
+          unit_num: 'switch1'
           control_action: 'on'
       turn_off:
         service: rest_command.electric_control
         data:
           room_num: '5'
-          unit_num: '1'
+          unit_num: 'switch1'
           control_action: 'off'          
           
     switch_room5:
@@ -161,13 +161,13 @@
         service: rest_command.electric_control
         data:
           room_num: '5'
-          unit_num: '2'
+          unit_num: 'switch2'
           control_action: 'on'
       turn_off:
         service: rest_command.electric_control
         data:
           room_num: '5'
-          unit_num: '2'
+          unit_num: 'switch2'
           control_action: 'off'
 
     gas_valve:
