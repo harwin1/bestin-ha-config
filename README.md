@@ -84,7 +84,7 @@ Home Assistant Config files for Bestin IOT
 ## 지원 기능
 1. 조명
 2. 난방
-3. 콘센트
+3. 콘센트(대기전력 차단 지원)
 4. 전열교환기
 5. 가스벨브(단방향)
 6. 외출설정
